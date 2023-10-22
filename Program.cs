@@ -15,18 +15,26 @@ Factory Pattern Demo
 /**
 Abstract Factory Pattern Demo
 */
-using AbstractFactoryPattern;
+// using AbstractFactoryPattern;
 
-// Get rounded shape factory
-AbstractFactory roundedShapeFactory = FactoryProducer.GetAbstractFactory(RoundedShapeFactory.FactoryName);
+// // Get rounded shape factory
+// AbstractFactory roundedShapeFactory = FactoryProducer.GetAbstractFactory(RoundedShapeFactory.FactoryName);
 
-// Draw square
-IShape? roundedSquare = roundedShapeFactory.GetShape(RoundedSquare.ShapeName);
-roundedSquare?.Draw();
+// // Draw square
+// IShape? roundedSquare = roundedShapeFactory.GetShape(RoundedSquare.ShapeName);
+// roundedSquare?.Draw();
 
-// Get shape factory
-AbstractFactory shapeFactory = FactoryProducer.GetAbstractFactory(ShapeFactory.FactoryName);
+// // Get shape factory
+// AbstractFactory shapeFactory = FactoryProducer.GetAbstractFactory(ShapeFactory.FactoryName);
 
-// Draw rounded square
-IShape? square = shapeFactory.GetShape(Square.ShapeName);
-square?.Draw();
+// // Draw rounded square
+// IShape? square = shapeFactory.GetShape(Square.ShapeName);
+// square?.Draw();
+
+/**
+Abstract Factory Pattern Demo
+*/
+// using SingletonPattern;
+
+// SingleObj singleObj = SingleObj.GetInstance();
+// singleObj.SayHello();
