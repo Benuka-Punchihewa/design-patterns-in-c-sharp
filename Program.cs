@@ -12,6 +12,8 @@ Factory Pattern Demo
 // IShape? circle = ShapeFactory.GetShape(Circle.ShapeName);
 // circle?.Draw();
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 /**
 Abstract Factory Pattern Demo
 */
@@ -31,10 +33,33 @@ Abstract Factory Pattern Demo
 // IShape? square = shapeFactory.GetShape(Square.ShapeName);
 // square?.Draw();
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 /**
-Abstract Factory Pattern Demo
+Singleton Pattern Demo
 */
 // using SingletonPattern;
 
 // SingleObj singleObj = SingleObj.GetInstance();
 // singleObj.SayHello();
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/**
+Builder Pattern Demo
+*/
+using BuilderPattern;
+
+// Vegi meal
+Meal vegiMeal = MealBuilder.PrepareVegiMeal();
+Console.WriteLine("Vegitarian Meal");
+vegiMeal.ShowMeal();
+Console.WriteLine($"Cost: {vegiMeal.GetCost()}");
+
+Console.WriteLine("\n============================\n");
+
+// Vegi meal
+Meal nonVegiMeal = MealBuilder.PrepareNonVegiMeal();
+Console.WriteLine("Non Vegitarian Meal");
+nonVegiMeal.ShowMeal();
+Console.WriteLine($"Cost: {nonVegiMeal.GetCost()}");
