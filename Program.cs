@@ -48,18 +48,41 @@ Singleton Pattern Demo
 /**
 Builder Pattern Demo
 */
-using BuilderPattern;
+// using BuilderPattern;
 
-// Vegi meal
-Meal vegiMeal = MealBuilder.PrepareVegiMeal();
-Console.WriteLine("Vegitarian Meal");
-vegiMeal.ShowMeal();
-Console.WriteLine($"Cost: {vegiMeal.GetCost()}");
+// // Vegi meal
+// Meal vegiMeal = MealBuilder.PrepareVegiMeal();
+// Console.WriteLine("Vegitarian Meal");
+// vegiMeal.ShowMeal();
+// Console.WriteLine($"Cost: {vegiMeal.GetCost()}");
 
-Console.WriteLine("\n============================\n");
+// Console.WriteLine("\n============================\n");
 
-// Vegi meal
-Meal nonVegiMeal = MealBuilder.PrepareNonVegiMeal();
-Console.WriteLine("Non Vegitarian Meal");
-nonVegiMeal.ShowMeal();
-Console.WriteLine($"Cost: {nonVegiMeal.GetCost()}");
+// // Vegi meal
+// Meal nonVegiMeal = MealBuilder.PrepareNonVegiMeal();
+// Console.WriteLine("Non Vegitarian Meal");
+// nonVegiMeal.ShowMeal();
+// Console.WriteLine($"Cost: {nonVegiMeal.GetCost()}");
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/**
+Builder Pattern Demo
+*/
+using PrototypePattern;
+
+ShapeCache.LoadCache();
+
+// Clone square
+Shape? clonedSquare = (Shape?)ShapeCache.GetShape("Square");
+if (clonedSquare != null)
+{
+    Console.WriteLine($"Shape: {clonedSquare.GetType()}");
+}
+
+// clone rectangle
+Shape? clonedRectangle = (Shape?)ShapeCache.GetShape("Rectangle");
+if (clonedRectangle != null)
+{
+    Console.WriteLine($"Shape: {clonedRectangle.GetType()}");
+}
